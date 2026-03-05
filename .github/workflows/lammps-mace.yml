@@ -2,14 +2,12 @@ name: build-lammps-mace
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
+    tags: ["lammps-mace-v*"]
     paths:
       - "lammps-mace/**"
       - ".github/workflows/lammps-mace.yml"
   workflow_dispatch:
-  push:
-    tags:
-      - "lammps-mace-v*"
 
 permissions:
   contents: read
@@ -22,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Set up Docker Buildx
+      - name: Set up Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Log in to GHCR
@@ -32,7 +30,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata (tags, labels)
+      - name: Docker metadata (tags/labels)
         id: meta
         uses: docker/metadata-action@v5
         with:

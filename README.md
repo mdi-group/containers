@@ -8,7 +8,7 @@ Images are published to **GitHub Container Registry (GHCR)** under `ghcr.io/mdi-
 | Image | GHCR | Notes |
 |------:|------|------|
 | lammps-mace | `ghcr.io/mdi-group/lammps-mace` | LAMMPS + KOKKOS(CUDA) + ML-IAP + MACE (A100/sm80) |
-| lammps-macefield | `ghcr.io/mdi-group/lammps-macefield` | LAMMPS + KOKKOS(CUDA) + ML-IAP + MACE-Field (A100/sm80, Slurm/Young-friendly) |
+| lammps-macefield | `ghcr.io/mdi-group/lammps-macefield` | LAMMPS + KOKKOS(CUDA) + ML-IAP + MACE-Field (A100/sm80) |
 
 Each image lives in its own folder with:
 - a `Dockerfile`
